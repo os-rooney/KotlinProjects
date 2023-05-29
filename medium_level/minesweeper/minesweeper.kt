@@ -2,7 +2,9 @@ import kotlin.random.Random
 
 fun main() {
     val size = 9
-    val mineCount = 10
+
+    println("How many mines do you want on the field?")
+    val mineCount = readln().toIntOrNull() ?: 0
 
     val minefield = generateMinefield(size, mineCount)
     printMinefield(minefield)
