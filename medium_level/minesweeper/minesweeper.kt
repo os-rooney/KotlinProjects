@@ -8,8 +8,8 @@ fun main() {
     printMinefield(minefield)
 }
 
-fun generateMinefield(size: Int, mineCount: Int): Array<Array<Char>> {
-    val minefield = Array(size) { Array(size) { '.' } }
+fun generateMinefield(size: Int, mineCount: Int): MutableList<MutableList<Char>> {
+    val minefield = MutableList(size) { MutableList(size) { '.' } }
 
     repeat(mineCount) {
         var row: Int
@@ -25,7 +25,7 @@ fun generateMinefield(size: Int, mineCount: Int): Array<Array<Char>> {
     return minefield
 }
 
-fun printMinefield(minefield: Array<Array<Char>>) {
+fun printMinefield(minefield: MutableList<MutableList<Char>>) {
     for (row in minefield) {
         for (cell in row) {
             print(cell)
@@ -33,3 +33,4 @@ fun printMinefield(minefield: Array<Array<Char>>) {
         println()
     }
 }
+
